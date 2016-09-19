@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/chatrealm/dctv-desktop#readme",
   "devDependencies": {
-    "electron-prebuilt": "^1.4.0"
+    "electron-prebuilt": "^1.4.0",
+    "eslint": "^3.5.0",
+    "eslint-config-defaults": "^9.0.0"
   }
 }
