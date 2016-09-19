@@ -1,0 +1,22 @@
+{
+  "name": "dctv-desktop",
+  "version": "0.0.1",
+  "description": "A desktop companion app for diamondclub.tv",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatrealm/dctv-desktop.git"
+  },
+  "author": "Alex Hanna <tinnvec@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chatrealm/dctv-desktop/issues"
+  },
+  "homepage": "https://github.com/chatrealm/dctv-desktop#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.0"
+  }
+}
