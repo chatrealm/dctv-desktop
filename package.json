@@ -4,10 +4,10 @@
   "description": "A desktop companion app for diamondclub.tv",
   "main": "main.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev concurrently -k \"npm run watch\" \"npm start\"",
+    "dev": "cross-env NODE_ENV=dev concurrently -k -s first \"npm run dev-watch\" \"npm start\"",
+    "dev-watch": "webpack-dev-server --inline --hot",
     "start": "electron .",
-    "build": "webpack",
-    "watch": "webpack-dev-server --hot --inline"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
