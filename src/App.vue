@@ -1,3 +1,7 @@
+<style>
+    @import 'style.scss'
+</style>
+
 <template>
     <div>
         <h1>{{ message }}</h1>
