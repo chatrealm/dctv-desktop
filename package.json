@@ -33,6 +33,7 @@
     "cross-env": "^2.0.1",
     "css-loader": "^0.25.0",
     "electron-prebuilt": "^1.4.0",
+    "eslint": "^3.5.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "vue-hot-reload-api": "^1.2.0",
