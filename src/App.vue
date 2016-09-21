@@ -4,10 +4,12 @@
 
 <template>
     <div>
-        <h1>{{ message }}</h1>
-        We are using node {{ versions.node }},
-        Chrome {{ versions.chrome }},
-        and Electron {{ versions.electron }}.
+        <h1>Live Channels</h1>
+        <ul>
+            <li v-for="ch in liveChannels">
+                {{ ch.friendlyalias }}
+            </li>
+        </ul>
     </div>
 </template>
 
@@ -15,9 +17,15 @@
     export default { 
         data () {
             return {
-                message: "Hello World-Loader!",
-                versions: process.versions
+                liveChannels: null
             }
+        },
+
+        ready () {
+            // Get assigned channels from DCTV api
+            this.$http.get('http://diamondclub.tv/api/channelsv2.php')
+                .then(response => { return response.json() })
+                .then(body => { this.liveChannels = body.assignedchannels })
         }
     }
 </script>
