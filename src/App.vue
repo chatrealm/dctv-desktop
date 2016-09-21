@@ -5,19 +5,21 @@
 <template>
     <div>
         <h1>Live Channels</h1>
-        <ul>
-            <li v-for="ch in liveChannels">
-                {{ ch.friendlyalias }}
-            </li>
-        </ul>
+        <live-channel v-for="ch in channels" :title="ch.friendlyalias" :img-src="ch.imageasset"></live-channel>
     </div>
 </template>
 
 <script>
-    export default { 
+    import LiveChannel from './components/LiveChannel.vue'
+
+    export default {
+        components: {
+            LiveChannel
+        },
+        
         data () {
             return {
-                liveChannels: null
+                channels: null
             }
         },
 
@@ -25,7 +27,7 @@
             // Get assigned channels from DCTV api
             this.$http.get('http://diamondclub.tv/api/channelsv2.php')
                 .then(response => { return response.json() })
-                .then(body => { this.liveChannels = body.assignedchannels })
+                .then(body => { this.channels = body.assignedchannels })
         }
     }
 </script>
