@@ -30,5 +30,6 @@ module.exports = {
         loaders: {
             js: 'babel'
         }
-    }
+    },
+    target: 'electron'
 }
