@@ -4,7 +4,7 @@
   "description": "A desktop companion app for diamondclub.tv",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "webpack && electron ."
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,16 @@
     "url": "https://github.com/chatrealm/dctv-desktop/issues"
   },
   "homepage": "https://github.com/chatrealm/dctv-desktop#readme",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^1.0.26"
+  },
   "devDependencies": {
-    "electron-prebuilt": "^1.4.0"
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-modern-node": "^3.2.0",
+    "babel-runtime": "^6.11.6",
+    "electron-prebuilt": "^1.4.0",
+    "webpack": "^1.13.2"
   }
 }

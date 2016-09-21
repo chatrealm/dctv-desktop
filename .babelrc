@@ -1,0 +1,4 @@
+{
+    "presets": ["modern-node"],
+    "plugins": ["transform-runtime"]
+}

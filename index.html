@@ -5,9 +5,12 @@
         <title>DCTV Desktop Companion</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        We are using node <script>document.write(process.versions.node)</script>,
-        Chrome <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
+        <div id="app">
+            <h1>{{ message }}</h1>
+            We are using node <script>document.write(process.versions.node)</script>,
+            Chrome <script>document.write(process.versions.chrome)</script>,
+            and Electron <script>document.write(process.versions.electron)</script>.
+        </div>
+        <script src="dist/build.js"></script>
     </body>
 </html>
