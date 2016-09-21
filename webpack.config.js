@@ -1,8 +1,12 @@
+var path = require('path')
+
 module.exports = {
-    entry: './src/main.js',
+    entry: {
+        app: './src/main.js'
+    },
     output: {
-        path: './dist',
-        publicPath: 'dist/',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: 'http://localhost:8080/dist/',
         filename: 'build.js'
     },
     module: {

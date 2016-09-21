@@ -9,6 +9,15 @@
         We are using node <script>document.write(process.versions.node)</script>,
         Chrome <script>document.write(process.versions.chrome)</script>,
         and Electron <script>document.write(process.versions.electron)</script>.
-        <script src="dist/build.js"></script>
+
+        <script>
+            var bundlePath = 'dist/build.js'
+            if (typeof process !== 'undefined' && process.env.NODE_ENV === 'dev') {
+                bundlePath = 'http://localhost:8080/' + bundlePath
+            }
+            var scriptElement = document.createElement('script')
+            scriptElement.src = bundlePath
+            document.body.appendChild(scriptElement)
+        </script>
     </body>
 </html>
