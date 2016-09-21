@@ -4,8 +4,7 @@
   "description": "A desktop companion app for diamondclub.tv",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -17,9 +16,8 @@
     "url": "https://github.com/chatrealm/dctv-desktop/issues"
   },
   "homepage": "https://github.com/chatrealm/dctv-desktop#readme",
+  "dependencies": {},
   "devDependencies": {
-    "electron": "^1.4.0",
-    "eslint": "^3.5.0",
-    "eslint-config-defaults": "^9.0.0"
+    "electron-prebuilt": "^1.4.0"
   }
 }
