@@ -5,7 +5,11 @@
 <template>
     <div>
         <h1>Live Channels</h1>
-        <live-channel v-for="ch in channels" :title="ch.friendlyalias" :img-src="ch.imageasset"></live-channel>
+        <live-channel v-for="ch in channels"
+                      :title="ch.friendlyalias"
+                      :img-src="ch.imageasset"
+                      :chan-number="ch.channel">
+        </live-channel>
     </div>
 </template>
 
