@@ -1,7 +1,7 @@
 {
   "scripts": {
     "postinstall": "install-app-deps",
-    "start": "electron ./app --enable-logging",
+    "start": "electron ./app",
     "dev": "cross-env NODE_ENV='dev' concurrently -k -s first \"webpack-dev-server --inline --hot\" \"npm start\"",
     "dist": "build -w --x64",
     "compile": "webpack"
