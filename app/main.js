@@ -11,7 +11,7 @@ function createWindow () {
     // and load the index.html of the app.
     win.loadURL(`file://${__dirname}/index.html`)
 
-    if (process.env.NODE_ENV !== 'production') {
+    if (process.env.NODE_ENV === 'dev') {
         // Ensure Vuejs DevTools are available
         require('vue-devtools').install()
         // Open the DevTools.

@@ -2,11 +2,11 @@ var path = require('path')
 
 module.exports = {
     entry: {
-        app: './src/main.js'
+        app: './app/src/main.js'
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: 'http://localhost:8080/dist/',
+        path: path.resolve(__dirname, 'app/build'),
+        publicPath: 'http://localhost:8080/build/',
         filename: 'build.js'
     },
     module: {
@@ -22,14 +22,9 @@ module.exports = {
             },
             {
                 test: /\.vue$/,
-                loader: 'vue'
+                loader: 'vue-loader'
             }
         ]
-    },
-    vue: {
-        loaders: {
-            js: 'babel'
-        }
     },
     target: 'electron'
 }

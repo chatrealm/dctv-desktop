@@ -7,12 +7,12 @@
     <body>
         <app></app>
         <script>
-            var bundlePath = 'dist/build.js'
+            var buildPath = 'build/build.js'
             if (typeof process !== 'undefined' && process.env.NODE_ENV === 'dev') {
-                bundlePath = 'http://localhost:8080/' + bundlePath
+                buildPath = 'http://localhost:8080/' + buildPath
             }
             var scriptElement = document.createElement('script')
-            scriptElement.src = bundlePath
+            scriptElement.src = buildPath
             document.body.appendChild(scriptElement)
         </script>
     </body>

@@ -1,28 +1,10 @@
 {
-  "name": "dctv-desktop",
-  "version": "0.0.1",
-  "description": "A desktop companion app for diamondclub.tv",
-  "main": "main.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev concurrently -k -s first \"npm run dev-watch\" \"npm start\"",
-    "dev-watch": "webpack-dev-server --inline --hot",
-    "start": "electron .",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chatrealm/dctv-desktop.git"
-  },
-  "author": "Alex Hanna <tinnvec@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chatrealm/dctv-desktop/issues"
-  },
-  "homepage": "https://github.com/chatrealm/dctv-desktop#readme",
-  "dependencies": {
-    "vue": "^1.0.26",
-    "vue-electron": "^1.0.4",
-    "vue-resource": "^1.0.2"
+    "postinstall": "install-app-deps",
+    "start": "electron ./app --enable-logging",
+    "dev": "cross-env NODE_ENV='dev' concurrently -k -s first \"webpack-dev-server --inline --hot\" \"npm start\"",
+    "dist": "build -w --x64",
+    "compile": "webpack"
   },
   "devDependencies": {
     "babel-core": "^6.14.0",
@@ -35,6 +17,7 @@
     "cross-env": "^2.0.1",
     "css-loader": "^0.25.0",
     "electron": "^1.4.0",
+    "electron-builder": "^7.3.0",
     "eslint": "^3.5.0",
     "node-sass": "^3.10.0",
     "sass-loader": "^4.0.2",
@@ -46,5 +29,9 @@
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
+  },
+  "build": {
+    "appId": "chatrealm.dctv.desktop",
+    "category": "public.app-category.entertainment"
   }
 }
