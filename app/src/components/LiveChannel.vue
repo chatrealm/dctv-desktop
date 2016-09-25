@@ -15,6 +15,9 @@
                 })
                 win.loadURL(this.playerUrl)
                 win.show()
+                if (process.env.NODE_ENV === 'dev') {
+                    win.webContents.openDevTools()
+                }
             }
         }
     }
