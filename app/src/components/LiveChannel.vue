@@ -5,7 +5,7 @@
 
 <script>
     export default {
-        props: [ 'title', 'imgSrc', 'chanNumber' ],
+        props: [ 'title', 'imgSrc', 'playerUrl' ],
 
         methods: {
             channelClick () {
@@ -13,7 +13,7 @@
                 win.on('close', () => {
                     win = null
                 })
-                win.loadURL(`http://diamondclub.tv/video.php?channel=${this.chanNumber}`)
+                win.loadURL(this.playerUrl)
                 win.show()
             }
         }
