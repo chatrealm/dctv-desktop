@@ -32,6 +32,9 @@
   },
   "build": {
     "appId": "chatrealm.dctv.desktop",
-    "category": "public.app-category.entertainment"
+    "category": "public.app-category.entertainment",
+    "win": {
+      "target": [ "zip" ]
+    }
   }
 }
