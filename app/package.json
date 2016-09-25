@@ -1,6 +1,5 @@
 {
   "name": "dctv-desktop",
-  "productName": "DCTV Desktop",
   "version": "0.0.1",
   "description": "A desktop companion app for diamondclub.tv",
   "main": "./main.js",
